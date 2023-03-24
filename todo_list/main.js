@@ -37,19 +37,19 @@ function render(){
         if(List[i].isComplete == true){
             resultHTML +=
             `<div class = "task task-done">
-               <div>${List[i].taskContent}</div>
-               <div>
-                 <button id="check-button" onclick="check('${List[i].id}')">check</button>
-                 <button id="delete-button" onclick="deleteTask('${List[i].id}')">delete</button>
+               <span>${List[i].taskContent}</span>
+               <div class="button-box">
+                 <button id="check-button" onclick="check('${List[i].id}')"><i class="fa-solid fa-rotate-left"></i></button>
+                 <button id="delete-button" onclick="deleteTask('${List[i].id}')"><i class="fa-regular fa-trash-can"></i></button>
                </div>
             </div>`
         }else{
             resultHTML +=
             `<div class = "task">
-               <div>${List[i].taskContent}</div>
-               <div>
-                 <button id="check-button" onclick="check('${List[i].id}')">check</button>
-                 <button id="delete-button" onclick="deleteTask('${List[i].id}')">delete</button>
+               <span>${List[i].taskContent}</span>
+               <div class="button-box">
+                 <button id="check-button" onclick="check('${List[i].id}')"><i class="fa-regular fa-circle-check"></i></button>
+                 <button id="delete-button" onclick="deleteTask('${List[i].id}')"><i class="fa-regular fa-trash-can"></i></button>
                </div>
             </div>`
         }
